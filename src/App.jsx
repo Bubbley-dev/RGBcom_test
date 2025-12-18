@@ -1,7 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from "./pages/Home"
+
 function App() {
 	return (
 		<>
-			<div>메인 페이지</div>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="/support" element={<Home />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	)
 }
