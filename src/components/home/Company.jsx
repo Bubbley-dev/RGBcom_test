@@ -1,8 +1,27 @@
 import Logo from "../../assets/Dexcowin_Icon_Red.png"
-import default_img from "../../assets/default_img.jpg"
+import company1 from "../../assets/company/company-1.png"
+import company2 from "../../assets/company/company-2.png"
+import company3 from "../../assets/company/company-3.png"
 import "./home.css"
 
 const Company = () => {
+	const datas = [
+		{
+			title: "포터블 엑스레이 전문 기업",
+			text: "산업용 및 의료용 진단장비를 위한 저선량, 고해상도 엑스레이 솔루션 및 시스템",
+			image: company1,
+		},
+		{
+			title: "시장 선도 기업",
+			text: "2004년에 설립 이후 포터블 엑스레이 장치의 선도 기업으로서 꾸준히 성장하고 있습니다.",
+			image: company2,
+		},
+		{
+			title: "R&D 선도 기업",
+			text: "끊임없는 연구 개발을 통해 다양한 엑스레이 장비 및 관련 제품을 개발합니다.",
+			image: company3,
+		},
+	]
 	return (
 		<>
 			<p className="logo company-logo">
@@ -30,30 +49,13 @@ const Company = () => {
 					</div>
 				</div>
 				<div className="company-pictures">
-					<div className="company-picture">
-						<img className="company-img" src={default_img} alt="" />
-						<p className="company-pictue-title">시장 선도 기업</p>
-						<p className="company-pictue-text">
-							2004년에 설립 이후 포터블 엑스레이 장치의 선도 기업으로서 꾸준히
-							성장하고 있습니다.
-						</p>
-					</div>
-					<div className="company-picture">
-						<img className="company-img" src={default_img} alt="" />
-						<p className="company-pictue-title">R&D 선도 기업</p>
-						<p className="company-pictue-text">
-							끊임없는 연구 개발을 통해 다양한 엑스레이 장비 및 관련 제품을
-							개발합니다.
-						</p>
-					</div>
-					<div className="company-picture">
-						<img className="company-img" src={default_img} alt="" />
-						<p className="company-pictue-title">포터블 엑스레이 전문 기업</p>
-						<p className="company-pictue-text">
-							산업용 및 의료용 진단장비를 위한 저선량, 고해상도 엑스레이 솔루션
-							및 시스템
-						</p>
-					</div>
+					{datas.map((data, index) => (
+						<div className="company-picture" key={`${index - 0}`}>
+							<img className="company-img" src={data.image} alt="" />
+							<p className="company-pictue-title">{data.title}</p>
+							<p className="company-pictue-text">{data.text}</p>
+						</div>
+					))}
 				</div>
 			</div>
 		</>

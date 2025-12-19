@@ -4,7 +4,7 @@ import Business from "../components/home/Business"
 import Company from "../components/home/Company"
 import MainBanner from "../components/home/MainBanner"
 import Product from "../components/home/Product"
-import Support from "../components/home/Support"
+import SupportArea from "../components/home/SupportArea"
 import WhoWeAre from "../components/home/WhoWeAre"
 import WhyDexcowin from "../components/home/WhyDexcowin"
 
@@ -18,7 +18,7 @@ const Home = () => {
 			<Product />
 			<WhyDexcowin />
 			<WhoWeAre />
-			<Support />
+			<SupportArea />
 			<Footer />
 		</>
 	)

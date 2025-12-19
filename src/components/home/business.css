@@ -1,0 +1,54 @@
+/* business */
+.business {
+	display: flex;
+	gap: 30px;
+}
+
+.business-img {
+	width: 874px;
+	height: 680px;
+}
+
+.business-content {
+	margin-left: 45px;
+}
+
+.business-content-title {
+	width: 450px;
+	font-size: 50px;
+	font-weight: bold;
+}
+
+.business-content-text {
+	width: 390px;
+	font-size: 18px;
+	color: #737373;
+}
+
+.category {
+	color: #cbcbcd;
+	font-size: 17px;
+	margin: 20px 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.category.active {
+	color: #e60012;
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.category-line {
+	position: absolute;
+	right: 120%;
+	width: 0;
+	height: 1px;
+	background-color: #e60012;
+	transition: width 0.3s ease;
+}
+
+.category.active .category-line {
+	width: 220px; /* 이미지 너비 + gap + margin-left */
+}

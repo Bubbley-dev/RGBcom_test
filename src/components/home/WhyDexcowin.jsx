@@ -1,7 +1,36 @@
 import Logo from "../../assets/Dexcowin_Icon_Red.png"
-import default_img from "../../assets/default_img.jpg"
+import support1 from "../../assets/support/support-1.png"
+import support2 from "../../assets/support/support-2.png"
+import support3 from "../../assets/support/support-3.png"
+import support4 from "../../assets/support/support-4.png"
 import "./home.css"
 const WhyDexcowin = () => {
+	const datas = [
+		{
+			number: "1",
+			title: "퍼스트 무버",
+			text: "배터리 탈착식 치과용 엑스레이의 시작, 혁신을 선도하는 포터블 엑스레이 전문 기업",
+			icon: support1,
+		},
+		{
+			number: "30",
+			title: "R&D 투자",
+			text: "기업부설 연구소를 운영하고 있고 매출의 30% 이상 R&D에 투자",
+			icon: support2,
+		},
+		{
+			number: "300+",
+			title: "글로벌 파트너",
+			text: "85개국, 300여개 이상의 글로벌 파트너망을 구축하여 전세계로 수출",
+			icon: support3,
+		},
+		{
+			number: "50+",
+			title: "인증 및 특허",
+			text: "FDA, CE를 비롯한 다수의 글로벌 인증으로 안정성과 기술 우수성 입증",
+			icon: support4,
+		},
+	]
 	return (
 		<div className="why">
 			<p className="logo">
@@ -15,15 +44,12 @@ const WhyDexcowin = () => {
 				<div className="why-more">더 알아보기</div>
 			</div>
 			<div className="why-content">
-				{Array.from({ length: 4 }, (_, i) => (
-					<div className="why-item">
-						<p className="why-item-num">1</p>
-						<p className="why-item-title">퍼스트 무버</p>
-						<p className="why-item-text">
-							배터리 탈착식 치과용 엑스레이의 시작, 혁신을 선도하는 포터블
-							엑스레이 전문 기업
-						</p>
-						<img className="why-item-icon" src={default_img} alt="" />
+				{datas.map((data, index) => (
+					<div className="why-item" key={`${index - 0}`}>
+						<p className="why-item-num">{data.number}</p>
+						<p className="why-item-title">{data.title}</p>
+						<p className="why-item-text">{data.text}</p>
+						<img className="why-item-icon" src={data.icon} alt="" />
 					</div>
 				))}
 			</div>

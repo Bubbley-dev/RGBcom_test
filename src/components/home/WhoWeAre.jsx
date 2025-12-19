@@ -1,5 +1,12 @@
 import Logo from "../../assets/Dexcowin_Icon_Red.png"
-import default_img from "../../assets/default_img.jpg"
+import who1 from "../../assets/who/who-1.png"
+import who2 from "../../assets/who/who-2.png"
+import who3 from "../../assets/who/who-3.png"
+import who4 from "../../assets/who/who-4.png"
+import who5 from "../../assets/who/who-5.png"
+import who6 from "../../assets/who/who-6.png"
+import who7 from "../../assets/who/who-7.png"
+import who8 from "../../assets/who/who-8.png"
 import "./home.css"
 
 const WhoWeAre = () => {
@@ -7,12 +14,7 @@ const WhoWeAre = () => {
 	const radius = 600
 
 	// 임시 이미지 데이터 (실제로는 props로 받거나 state로 관리)
-	const photos = Array.from({ length: photoCount }, (_, i) => ({
-		id: i + 1,
-		src: default_img, // 임시 이미지
-		alt: `사진 ${i + 1}`,
-	}))
-
+	const photos = [who1, who2, who3, who4, who5, who6, who7, who8]
 	const getPhotoPosition = (index) => {
 		// 반원 상에서의 각도 계산 (180도를 8등분)
 		const angle = (Math.PI / (photoCount - 1)) * index
@@ -46,7 +48,7 @@ const WhoWeAre = () => {
 						{/* 중앙 컨텐츠 */}
 						<div className="center-content">
 							<p className="center-title">For a safer world</p>
-							<p className="center-subtitle">For a safer world</p>
+							<p className="center-subtitle">with advanced x-ray solution</p>
 							<p className="center-text">
 								의료, 요양원, 치과, 수의사, 보안/NDT, 비상 사태, 군, 법정의 등
 								다양한 환경과 제한된 자원 속에서도 경제성과 정확성을 동시에
@@ -62,18 +64,18 @@ const WhoWeAre = () => {
 
 							return (
 								<div
-									key={photo.id}
+									key={`photo-${index}`}
 									className="photo-item"
 									style={{
-										left: `${radius + 60 + x}px`,
-										top: `${radius + 100 + y}px`,
-										transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`,
+										left: `${radius - 60 + x}px`,
+										top: `${radius - 60 + y}px`,
+										// transform: `translate(-50%, -50%) rotate(${rotationAngle}deg)`,
 									}}
 								>
 									<div className="photo-wrapper">
 										<img
-											src={photo.src}
-											alt={photo.alt}
+											src={photo}
+											alt={`photo-${index}`}
 											className="photo-image"
 										/>
 									</div>

@@ -20,8 +20,14 @@ header {
 }
 
 .header-link {
+	height: 100%;
+	align-content: center;
 	font-weight: bold;
 	font-size: 18px;
+}
+
+.header-link.active {
+	border-bottom: #e6e6e6 3.5px solid;
 }
 
 .header-line {
