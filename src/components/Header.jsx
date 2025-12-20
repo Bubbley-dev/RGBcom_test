@@ -12,25 +12,27 @@ const Header = ({ isWhite = false }) => {
 					<Link className="header-icon" to="/">
 						<img src={isWhite ? WhiteLogo : BlackLogo} alt="덱스코윈 로고" />
 					</Link>
-					<Link className="header-link" to="/">
+					<Link className={"header-link" + (isWhite ? " white" : "")} to="/">
 						회사소개
 					</Link>
-					<Link className="header-link" to="/">
+					<Link className={"header-link" + (isWhite ? " white" : "")} to="/">
 						제품소개
 					</Link>
-					<Link className="header-link" to="/">
+					<Link className={"header-link" + (isWhite ? " white" : "")} to="/">
 						채용안내
 					</Link>
 					<Link
 						className={
-							"header-link" + (location.pathname == "/support" ? " active" : "")
+							"header-link" +
+							(location.pathname == "/support" ? " active" : "") +
+							(isWhite ? " white" : "")
 						}
 						to="/support"
 					>
 						고객지원
 					</Link>
 				</div>
-				<hr className="header-line" />
+				<hr className={"header-line" + (isWhite ? " white" : "")} />
 			</header>
 		</>
 	)

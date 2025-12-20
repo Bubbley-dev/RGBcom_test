@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Certificate from "./pages/Certificate"
 import Home from "./pages/Home"
-import Support from "./pages/Support"
 
 function App() {
 	return (
@@ -8,7 +8,7 @@ function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="/support" element={<Support />} />
+					<Route path="/support" element={<Certificate />} />
 				</Routes>
 			</BrowserRouter>
 		</>

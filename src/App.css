@@ -14,6 +14,10 @@ header {
 	gap: 63px;
 }
 
+.white {
+	color: #ffffff;
+}
+
 .header-icon {
 	height: 31.85px;
 	margin-right: auto;

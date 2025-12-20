@@ -40,7 +40,7 @@ const MainBanner = () => {
 			<div className="carousel-image-container" style={getCarouselStyles()}>
 				{datas.map((data, index) => (
 					<div
-						className="banner"
+						className="main-banner"
 						style={{ backgroundImage: `url(${data[3]})` }}
 						key={`${index - 0}`}
 					>
