@@ -26,15 +26,15 @@ const WhoWeAre = () => {
 		return { x, y, angle }
 	}
 	return (
-		<div className="who">
+		<section id="whoweare" className="who">
 			<div className="who-container">
 				<p className="logo">
-					<img src={Logo} className="logo-img why-logo" />
+					<img src={Logo} className="logo-img why-logo" alt="덱스코윈 아이콘" />
 					<span>WHO WE ARE</span>
 				</p>
-				<p className="who-slogan">
+				<h4 className="who-slogan">
 					덱스코윈의 기술이 더 건강한 삶, 더 안전한 세상을 만들어 갑니다.
-				</p>
+				</h4>
 			</div>
 			<div className="gallery-page">
 				<div className="gallery-wrapper">
@@ -47,14 +47,14 @@ const WhoWeAre = () => {
 					>
 						{/* 중앙 컨텐츠 */}
 						<div className="center-content">
-							<p className="center-title">For a safer world</p>
+							<h1 className="center-title">For a safer world</h1>
 							<p className="center-subtitle">with advanced x-ray solution</p>
 							<p className="center-text">
 								의료, 요양원, 치과, 수의사, 보안/NDT, 비상 사태, 군, 법정의 등
 								다양한 환경과 제한된 자원 속에서도 경제성과 정확성을 동시에
 								실현하는 포터블 엑스레이 솔루션을 제공합니다.
 							</p>
-							<p className="who-badge">더 알아보기</p>
+							<button className="why-more hover">더 알아보기</button>
 						</div>
 
 						{/* 사진들 */}
@@ -63,7 +63,7 @@ const WhoWeAre = () => {
 							const rotationAngle = ((angle - Math.PI) * 180) / Math.PI + 90
 
 							return (
-								<div
+								<article
 									key={`photo-${index}`}
 									className="photo-item"
 									style={{
@@ -79,13 +79,13 @@ const WhoWeAre = () => {
 											className="photo-image"
 										/>
 									</div>
-								</div>
+								</article>
 							)
 						})}
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

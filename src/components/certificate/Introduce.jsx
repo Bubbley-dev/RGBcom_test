@@ -3,10 +3,10 @@ import "./certificate.css"
 
 const Introduce = () => {
 	return (
-		<div className="introduce">
+		<section id="introduce" className="introduce">
 			<div className="introduce-content">
 				<div className="introduce-line"></div>
-				<p className="introduce-title">인증</p>
+				<h1 className="introduce-title">인증</h1>
 				<p className="introduce-text">
 					덱스코윈은 진화하는 시장의 요구를 충족시키는 것을 목표로 지속적으로
 					발전하기 위해 노력하고 있습니다.
@@ -20,12 +20,12 @@ const Introduce = () => {
 					<img
 						className="introduce-box-logo"
 						src={WhiteLogo}
-						alt=""
+						alt="덱스코윈 로고"
 						width="107px"
 					/>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

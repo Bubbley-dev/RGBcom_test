@@ -1,6 +1,9 @@
+/* 공통 스타일 */
 .logo {
 	color: #e60012;
+	font-family: "Inter";
 	font-size: 18px;
+	font-weight: bold;
 	display: flex;
 	gap: 25px;
 }
@@ -11,13 +14,13 @@
 	transform: rotate(180deg);
 }
 
-/* company */
 .container {
 	padding: 0px 180px 100px 230px;
 	display: flex;
 	justify-content: space-between;
 }
 
+/* company */
 .company-logo {
 	left: -45px;
 	margin-top: 100px;
@@ -34,12 +37,15 @@
 .company-title {
 	font-size: 50px;
 	font-weight: bold;
+	line-height: 65px;
 	margin: 0;
 }
 
 .company-text {
+	font-family: "Inter";
 	font-size: 18px;
-	font-weight: 300;
+
+	line-height: 30px;
 	color: #737373;
 }
 
@@ -47,25 +53,35 @@
 	width: 300px;
 	color: #737373;
 	margin-top: 30px;
+	padding: 10px 0;
+	border-bottom: #d2d2d2 2px solid;
 }
 
 .company-detail-flex {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
+}
+
+.company-detail-text {
+	color: #737373;
+	font-size: 18px;
+	font-weight: 600;
 }
 
 .company-detail-arrow {
 	color: #e60012;
+	font-size: 28px;
+	font-weight: 500;
 }
 
 .company-pictures {
 	display: flex;
 	gap: 30px;
 }
-
 .company-img,
-.company-pictue-title,
-.company-pictue-text {
+.company-picture-title,
+.company-picture-text {
 	width: 288px;
 }
 
@@ -73,12 +89,13 @@
 	height: 288px;
 }
 
-.company-pictue-title {
+.company-picture-title {
 	font-size: 24px;
 	font-weight: bold;
 }
 
-.company-pictue-text {
+.company-picture-text {
+	font-family: "Inter";
 	font-size: 15px;
 	color: #737373;
 }
@@ -134,8 +151,8 @@
 	display: grid;
 	grid-template-rows:
 		auto /* number */
-		auto /* title - 고정 */
-		100px /* text - 고정 */
+		auto /* title */
+		100px /* text */
 		auto; /* icon */
 
 	padding: 36px;
@@ -143,6 +160,7 @@
 
 .why-item-num {
 	color: #e60012;
+	font-family: "Inter";
 	font-size: 65px;
 	font-weight: bold;
 	margin: 0;
@@ -156,6 +174,7 @@
 
 .why-item-text {
 	color: #737373;
+	font-family: "Inter";
 	font-size: 15px;
 }
 
@@ -250,13 +269,15 @@
 
 .center-subtitle {
 	font-size: 24px;
-	font-weight: 400;
+
 	margin: 0;
 }
 
 .center-text {
 	color: #737373;
+	font-family: "Inter";
 	font-size: 18px;
+
 	margin: 50px 0;
 	text-align: center;
 }
@@ -316,13 +337,17 @@
 
 .news-item-text {
 	color: #737373;
+	font-family: "Inter";
 	font-size: 16px;
+
 	margin-bottom: 70px;
 }
 
 .news-item-date {
 	color: #737373;
+	font-family: "Inter";
 	font-size: 15px;
+
 	align-self: center;
 }
 
@@ -341,7 +366,8 @@
 }
 
 .support-link-text {
-	font-size: 15px;
+	font-family: "Inter";
+	font-size: 16px;
 }
 
 .support-link-img {

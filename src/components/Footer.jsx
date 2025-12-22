@@ -1,14 +1,32 @@
 import "../App.css"
 import Logo from "../assets/Dexcowin_Logo_Gray.png"
+import facebook from "../assets/icons/facebook.png"
+import instagram from "../assets/icons/instagram.png"
+import linkedin from "../assets/icons/linkedin.png"
+import youtube from "../assets/icons/youtube.png"
 
 const Footer = () => {
 	return (
-		<footer className="footer">
-			<img className="footer-icon" src={Logo} alt="덱스코윈 로고" />
+		<footer id="footer" className="footer">
+			<img className="footer-icon hover" src={Logo} alt="덱스코윈 로고" />
 			<div className="footer-text">
 				<div className="footer-link">
-					<a href="">회사소개</a> | <a href="">문의하기</a> |
-					<a href="">개인정보처리방침</a> | <a href="">무단이메일수집거부</a>
+					<a href="#footer" className="hover">
+						회사소개
+					</a>{" "}
+					|{" "}
+					<a href="#footer" className="hover">
+						문의하기
+					</a>{" "}
+					|
+					<a href="#footer" className="hover">
+						{" "}
+						개인정보처리방침
+					</a>{" "}
+					|{" "}
+					<a href="#footer" className="hover">
+						무단이메일수집거부
+					</a>
 				</div>
 				<div className="footer-inform">
 					<p className="footer-address">
@@ -26,34 +44,34 @@ const Footer = () => {
 						<span className="footer-contact-title">EMAIL</span>
 						<span>info@dexcowin.com</span>
 						<div className="footer-sns">
-							<div
-								style={{
-									backgroundColor: "#737373",
-									width: "33.15px",
-									height: "33.15px",
-								}}
-							></div>
-							<div
-								style={{
-									backgroundColor: "#737373",
-									width: "33.15px",
-									height: "33.15px",
-								}}
-							></div>
-							<div
-								style={{
-									backgroundColor: "#737373",
-									width: "33.15px",
-									height: "33.15px",
-								}}
-							></div>
-							<div
-								style={{
-									backgroundColor: "#737373",
-									width: "33.15px",
-									height: "33.15px",
-								}}
-							></div>
+							<img
+								className="hover"
+								src={facebook}
+								alt="facebook"
+								width="33.15px"
+								height="33.15px"
+							/>
+							<img
+								className="hover"
+								src={youtube}
+								alt="youtube"
+								width="33.15px"
+								height="33.15px"
+							/>
+							<img
+								className="hover"
+								src={linkedin}
+								alt="linkedin"
+								width="33.15px"
+								height="33.15px"
+							/>
+							<img
+								className="hover"
+								src={instagram}
+								alt="instagram"
+								width="33.15px"
+								height="33.15px"
+							/>
 						</div>
 					</div>
 				</div>
@@ -62,7 +80,7 @@ const Footer = () => {
 					Copyright 2025 Dexcowin Co., Ltd. All Rights Reserved.
 				</p>
 			</div>
-			<a className="footer-top" href="#">
+			<a className="footer-top hover" href="#">
 				TOP
 			</a>
 		</footer>

@@ -21,13 +21,17 @@
 
 .business-content-text {
 	width: 390px;
+	font-family: "Inter";
+
 	font-size: 18px;
 	color: #737373;
 }
 
 .category {
 	color: #cbcbcd;
+	font-family: "Inter";
 	font-size: 17px;
+	font-weight: 500;
 	margin: 20px 0;
 	position: relative;
 	display: flex;
@@ -42,13 +46,13 @@
 
 .category-line {
 	position: absolute;
-	right: 120%;
+	right: 115%;
 	width: 0;
 	height: 1px;
 	background-color: #e60012;
-	transition: width 0.3s ease;
 }
 
 .category.active .category-line {
 	width: 220px; /* 이미지 너비 + gap + margin-left */
+	transition: width 0.3s ease;
 }

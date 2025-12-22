@@ -10,7 +10,6 @@ const Banner = () => {
 				<img
 					className="banner-icon"
 					src={SmallIcon}
-					alt=""
 					width="17px"
 					height="17px"
 				/>

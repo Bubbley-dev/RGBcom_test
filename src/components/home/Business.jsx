@@ -41,24 +41,30 @@ const Business = () => {
 	}, [datas.length])
 
 	return (
-		<div className="business container">
-			<img className="business-img" src={datas[listIndex].image} alt="" />
+		<section id="business" className="business container">
+			<img
+				className="business-img"
+				src={datas[listIndex].image}
+				alt={datas[listIndex].category}
+			/>
 			<div>
 				<p className="logo">
-					<img src={Logo} className="logo-img" />
+					<img alt="덱스코윈 아이콘" src={Logo} className="logo-img" />
 					<span>BUSINESS</span>
 				</p>
 				<div className="business-content">
-					<p className="business-content-title">
+					<h1 className="business-content-title">
 						다양한 환경에 알맞은 최적의 진단솔루션
-					</p>
+					</h1>
 					<p className="business-content-text">
 						㈜덱스코윈은 흉부를 비롯한 인체 전반 및 동물, 일반 산업 등
-						엑스레이가 필요한 모든 영역에서 최적의 진단 솔루션을 제공합니다.
+						엑스레이가 필요한 모든 영역에서 최적의 진단 솔루션을 제공합니다.
 					</p>
 					{datas.map((data, index) => (
-						<div
-							className={`category ${index === listIndex ? "active" : ""}`}
+						<article
+							className={`category ${
+								index === listIndex ? "active" : ""
+							} hover`}
 							onClick={() => {
 								setListIndex(index)
 							}}
@@ -66,11 +72,11 @@ const Business = () => {
 						>
 							{data.category.toUpperCase()}
 							<div className="category-line"></div>
-						</div>
+						</article>
 					))}
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

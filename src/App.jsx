@@ -1,4 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
+import "./assets/fonts/inter/woff2/inter.css"
+import "./assets/fonts/pretendard/pretendard.css"
 import Certificate from "./pages/Certificate"
 import Home from "./pages/Home"
 

@@ -30,57 +30,56 @@ const SupportArea = () => {
 		},
 	]
 	return (
-		<div className="support">
+		<section id="support" className="support">
 			<p className="logo">
-				<img src={Logo} className="logo-img why-logo" />
+				<img src={Logo} className="logo-img why-logo" alt="덱스코윈 아이콘" />
 				<span>SUPPORT</span>
 			</p>
 			<div className="support-container">
-				<p className="support-title">
+				<h1 className="support-title">
 					의료 서비스 경쟁력 향상과 <br /> 환자의 복지 개선에 이바지합니다.
-				</p>
-				<Link to="/support" className="support-detail">
+				</h1>
+				<Link to="/support" className="company-detail support-detail hover">
 					<div className="company-detail-flex">
 						<span className="company-detail-text">전체보기</span>
 						<span className="company-detail-arrow">→</span>
 					</div>
-					<hr />
 				</Link>
 			</div>
 			<div className="support-container">
 				{datas.map((data, index) => (
-					<div className="news-item" key={`${index - 0}`}>
+					<article className="news-item hover" key={`${index - 0}`}>
 						<p className="news-item-category">{data.category}</p>
-						<p className="news-item-title">{data.title}</p>
+						<h2 className="news-item-title">{data.title}</h2>
 						<p className="news-item-text">{data.text}</p>
 						<p className="news-item-date">
 							<span>🕘 </span>
 							{data.date}
 						</p>
-					</div>
+					</article>
 				))}
 			</div>
 			<div className="support-container">
-				<div className="support-link bg-red">
+				<button className="support-link bg-red hover">
 					<div>
 						<p className="support-link-title">인재채용</p>
 						<p className="support-link-text">
 							덱스코윈의 미래를 함께 열어갈 인재를 모집합니다.
 						</p>
 					</div>
-					<img className="support-link-img" src={link_img} alt="" />
-				</div>
-				<div className="support-link bg-blue">
+					<img className="support-link-img" src={link_img} alt="인재채용" />
+				</button>
+				<button className="support-link bg-blue hover">
 					<div>
 						<p className="support-link-title">온라인 문의</p>
 						<p className="support-link-text">
 							덱스코윈은 고객님의 물음에 언제든 준비되어 있습니다.
 						</p>
 					</div>
-					<img className="support-link-img" src={link_img} alt="" />
-				</div>
+					<img className="support-link-img" src={link_img} alt="온라인문의" />
+				</button>
 			</div>
-		</div>
+		</section>
 	)
 }
 

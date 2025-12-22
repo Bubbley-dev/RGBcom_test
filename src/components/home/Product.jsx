@@ -67,11 +67,15 @@ const Product = () => {
 	}
 
 	return (
-		<div className="product">
+		<section id="product" className="product">
 			<span className="logo product-logo-box">
 				<div className="product-logo">
 					<div>
-						<img src={Logo} className="logo-img product-logo-img" />
+						<img
+							src={Logo}
+							className="logo-img product-logo-img"
+							alt="덱스코윈 아이콘"
+						/>
 					</div>
 					<span className="product-logo-text">PRODUCT</span>
 				</div>
@@ -81,41 +85,47 @@ const Product = () => {
 				<img
 					className="product-carousel-img"
 					src={datas[listIndex].image}
-					alt=""
+					alt={datas[listIndex].title}
 				/>
 				<div className="product-carousel-list">
 					{datas.map((data, index) => (
 						<img
 							className={`product-carousel-item ${
 								index === listIndex ? "active" : ""
-							}`}
+							} hover`}
 							onClick={() => {
 								setListIndex(index)
 							}}
 							src={data.image}
-							alt=""
+							alt={data.title}
 							key={`${index - 0}`}
 						/>
 					))}
 				</div>
 				<div className="product-carousel-content">
 					<p className="product-carousel-badge">X-ray System</p>
-					<p className="product-carousel-title">{datas[listIndex].title}</p>
-					<p className="product-carousel-subtitle">
+					<h1 className="product-carousel-title">{datas[listIndex].title}</h1>
+					<h2 className="product-carousel-subtitle">
 						{datas[listIndex].subtitle}
-					</p>
+					</h2>
 					<p className="product-carousel-text">{datas[listIndex].text}</p>
 					<div className="product-carousel-btns">
-						<div className="product-carousel-btn" onClick={prevProdcut}>
+						<button
+							className="product-carousel-btn hover"
+							onClick={prevProdcut}
+						>
 							{" < "}
-						</div>
-						<div className="product-carousel-btn" onClick={nextProdcut}>
+						</button>
+						<button
+							className="product-carousel-btn hover"
+							onClick={nextProdcut}
+						>
 							{" > "}
-						</div>
+						</button>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	)
 }
 

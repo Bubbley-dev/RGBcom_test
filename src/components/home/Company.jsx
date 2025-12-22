@@ -23,16 +23,16 @@ const Company = () => {
 		},
 	]
 	return (
-		<>
+		<section id="company">
 			<p className="logo company-logo">
-				<img src={Logo} className="logo-img" />
+				<img src={Logo} className="logo-img" alt="덱스코윈 아이콘" />
 				<span>COMPANY</span>
 			</p>
 			<div className="company container">
 				<div className="company-contents">
-					<p className="company-title">
+					<h1 className="company-title">
 						포터블 엑스레이 <br /> 혁신의 리더, 덱스코윈
-					</p>
+					</h1>
 					<p className="company-text">
 						㈜덱스코윈은 포터블 엑스레이 분야를 선도하는 기업으로, 의료· 수의 ·
 						산업 등 다양한 영역에서 활용 가능한 첨단장비와 솔루션을 개발,
@@ -40,25 +40,24 @@ const Company = () => {
 						엑스레이 기술과 솔루션을 창출하여 인류복지와 삶의 질 향상에 기여하고
 						있습니다.
 					</p>
-					<div className="company-detail">
+					<div className="company-detail hover">
 						<div className="company-detail-flex">
 							<span className="company-detail-text">회사 자세히 보기</span>
 							<span className="company-detail-arrow">→</span>
 						</div>
-						<hr />
 					</div>
 				</div>
 				<div className="company-pictures">
 					{datas.map((data, index) => (
-						<div className="company-picture" key={`${index - 0}`}>
-							<img className="company-img" src={data.image} alt="" />
-							<p className="company-pictue-title">{data.title}</p>
-							<p className="company-pictue-text">{data.text}</p>
-						</div>
+						<article className="company-picture" key={`${index - 0}`}>
+							<img className="company-img" src={data.image} alt={data.title} />
+							<h2 className="company-picture-title">{data.title}</h2>
+							<p className="company-picture-text">{data.text}</p>
+						</article>
 					))}
 				</div>
 			</div>
-		</>
+		</section>
 	)
 }
 

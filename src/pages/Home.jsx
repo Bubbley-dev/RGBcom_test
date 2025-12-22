@@ -12,13 +12,15 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-			<MainBanner />
-			<Company />
-			<Business />
-			<Product />
-			<WhyDexcowin />
-			<WhoWeAre />
-			<SupportArea />
+			<main>
+				<MainBanner />
+				<Company />
+				<Business />
+				<Product />
+				<WhyDexcowin />
+				<WhoWeAre />
+				<SupportArea />
+			</main>
 			<Footer />
 		</>
 	)

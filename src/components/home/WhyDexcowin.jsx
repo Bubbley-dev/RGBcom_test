@@ -32,28 +32,28 @@ const WhyDexcowin = () => {
 		},
 	]
 	return (
-		<div className="why">
+		<section id="whydexcowin" className="why">
 			<p className="logo">
-				<img src={Logo} className="logo-img why-logo" />
+				<img src={Logo} className="logo-img why-logo" alt="덱스코윈 아이콘" />
 				<span>WHY DEXCOWIN</span>
 			</p>
 			<div className="why-container">
-				<p className="why-slogan">
+				<h2 className="why-slogan">
 					끊임없는 연구와 성과를 바탕으로 새로운 기준을 만들어 나갑니다.
-				</p>
-				<div className="why-more">더 알아보기</div>
+				</h2>
+				<button className="why-more hover">더 알아보기</button>
 			</div>
 			<div className="why-content">
 				{datas.map((data, index) => (
-					<div className="why-item" key={`${index - 0}`}>
-						<p className="why-item-num">{data.number}</p>
-						<p className="why-item-title">{data.title}</p>
+					<article className="why-item" key={`${index - 0}`}>
+						<h3 className="why-item-num">{data.number}</h3>
+						<h4 className="why-item-title">{data.title}</h4>
 						<p className="why-item-text">{data.text}</p>
-						<img className="why-item-icon" src={data.icon} alt="" />
-					</div>
+						<img className="why-item-icon" src={data.icon} alt={data.title} />
+					</article>
 				))}
 			</div>
-		</div>
+		</section>
 	)
 }
 

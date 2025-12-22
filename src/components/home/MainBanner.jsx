@@ -36,34 +36,32 @@ const MainBanner = () => {
 	}
 
 	return (
-		<div className="carousel-container">
+		<header id="banner" className="carousel-container">
 			<div className="carousel-image-container" style={getCarouselStyles()}>
 				{datas.map((data, index) => (
-					<div
+					<article
 						className="main-banner"
 						style={{ backgroundImage: `url(${data[3]})` }}
 						key={`${index - 0}`}
 					>
 						<p className="banner-1">{data[0]}</p>
-						<p className="banner-2">{data[1]}</p>
+						<h1 className="banner-2">{data[1]}</h1>
 						<p className="banner-3">{data[2]}</p>
 						<div className="carousel-indicators">
 							{datas.map((_, idx) => (
 								<div
 									key={idx}
-									className={`indicator ${
-										idx === carouselIndex ? "active" : ""
-									}`}
+									className={`indicator${idx === index ? " active" : ""} hover`}
 									onClick={() => {
 										setCarouselIndex(idx)
 									}}
 								/>
 							))}
 						</div>
-					</div>
+					</article>
 				))}
 			</div>
-		</div>
+		</header>
 	)
 }
 

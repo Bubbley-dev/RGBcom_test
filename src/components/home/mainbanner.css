@@ -16,6 +16,7 @@
 
 .banner-1 {
 	width: 600px;
+	font-family: "Inter";
 	font-size: 20px;
 	line-height: 24px;
 	font-weight: 500;
@@ -34,7 +35,7 @@
 	width: 401px;
 	font-size: 22px;
 	line-height: 34px;
-	font-weight: 400;
+
 	margin: 0;
 }
 
@@ -42,13 +43,10 @@
 	width: 100vw;
 	height: 100vh;
 	display: flex;
-	/* justify-content: center; */
-	/* align-items: center; */
 	overflow: hidden;
 }
 
 .carousel-image-container {
-	/* width: 100%; */
 	height: 100%;
 	display: flex;
 	align-items: center;
@@ -59,17 +57,16 @@
 	display: flex;
 	align-items: end;
 	gap: 8px;
-	margin-top: 30px; /* banner-3 아래 간격 */
+	margin-top: 30px;
 }
 
 .indicator {
 	width: 111px;
-	height: 1px;
-	background-color: #ffffff;
-	transition: height 0.3s ease;
+	height: 5px;
+	border-bottom: #ffffff 1px solid;
+	margin-top: 300px;
 }
 
 .indicator.active {
-	height: 5px;
-	background-color: #ffffff;
+	border-bottom: #ffffff 5px solid;
 }
