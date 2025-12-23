@@ -4,6 +4,14 @@
 
 ---
 
+## 0. 프로젝트 배포
+
+https://rgbcom-test.vercel.app/
+
+- vercel을 이용하여 배포하였으며, 배포에는 '검색 차단' 과 같은 보안을 준수하였습니다.
+- 본 배포는 전형 종료 후 배포 중단할 예정입니다.
+- 페이지는 1920\*1080 해상도를 기준으로 최적화되었습니다.
+
 ## 1. 프로젝트 개요
 
 - **대상:** Figma 시안 기반 웹 페이지 구현
@@ -58,7 +66,7 @@ Figma에 제시된 3개의 핵심 섹션에 대해 각각의 디자인 특성에
 
 ---
 
-## 4. 실행 방법
+## 4. 프로젝트 실행 방법
 
 ```bash
 git clone https://github.com/Bubbley-dev/RGBcom_test.git
@@ -66,9 +74,11 @@ cd RGBcom_test
 
 npm install
 
-npm run dev
+npm run build
+
+npm run preview
 ```
 
-- 서버 실행 후 링크 열기(localhost) : http://localhost:5173/
+- 서버 실행 후 링크 열기(localhost) : http://localhost:4173/
 
 프로젝트 보안을 위해 디자인 자산이 포함된 소스 코드는 제출 및 당사 검토 후 비공개로 전환됩니다.
